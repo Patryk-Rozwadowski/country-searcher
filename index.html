@@ -16,13 +16,17 @@
 
 <body>
   <main>
-    <h1>Country search engine</h1>
-    <button id="search">Search a country</button>
-    <input id="country-name" type="text" />
-    <h2>List of countries</h2>
-    <ul id="countries">
-      <li>No data</li>
-    </ul>
+    <section class="container">
+      <h1 class="country__title">Country search engine</h1>
+      <section class="country__search-items">
+        <button class="country__btn" id="search">Find country!</button>
+        <input class="country__input" id="country-name" type="text" name="country__search" placeholder="Type your country!" />
+      </section>
+      <h2 class="country__list-title">List of countries:</h2>
+      <ul class="country__list" id="countries">
+        <li>No data</li>
+      </ul>
+    </section>
   </main>
   <script src='js/script.js'></script>
 </body>

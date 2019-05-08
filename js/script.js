@@ -23,7 +23,8 @@ function showCountriesList(resp) {
     countriesList.appendChild(countryContainer)
 
     var countryFlag = document.createElement('img');
-    countryFlag.setAttribute('src', item.flag);
+
+    countryFlag = '<img class="country-flag" src=\"' + item.flag + '\" alt="country flag">';
 
     var countryFlagContainer = document.createElement('li');
     var countryName = document.createElement('li');
@@ -31,10 +32,10 @@ function showCountriesList(resp) {
     var countryRegion = document.createElement('li');
     var countryPopulation = document.createElement('li');
 
-    countryName.innerHTML = 'Nazwa państwa: ' + item.name;
-    countryCapital.innerHTML = 'Stolica: ' + item.capital;
-    countryRegion.innerHTML = 'Region: ' + item.region;
-    countryPopulation.innerHTML = 'Populacja: ' + item.population;
+    countryName.innerHTML = '<span class="country__item">Nazwa państwa: </span>' + item.name;
+    countryCapital.innerHTML = '<span class="country__item">Stolica: </span>' + item.capital;
+    countryRegion.innerHTML = '<span class="country__item">Region: </span>' + item.region;
+    countryPopulation.innerHTML = '<span class="country__item">Populacja: </span>' + item.population;
 
     countryContainer.appendChild(countryFlagContainer);
     countryFlagContainer.innerHTML = countryFlag;
